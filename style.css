@@ -288,7 +288,7 @@ h1 span{
 
     
 
-    .hamburger:focus ~ .nav ul{
+  .hamburger:focus-within ~ .menu_list ul{
     display: flex;
 }
     }
