@@ -288,10 +288,9 @@ h1 span{
 
     
 
-    .hamburger button:focus ~
-        .menu_list ul{
-        display: flex;
-    }
+    .hamburger:focus ~ .nav ul{
+    display: flex;
+}
     }
     
     
