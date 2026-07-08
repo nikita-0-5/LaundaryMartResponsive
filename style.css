@@ -288,9 +288,9 @@ h1 span{
 
     
 
-  .hamburger:focus-within ~ .menu_list ul{
+    .hamburger:focus-within ~ .menu_list ul{
     display: flex;
-}
+    }
     }
     
     
