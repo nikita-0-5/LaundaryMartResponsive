@@ -1,10 +1,11 @@
 **Laundry Services - Hero Section - Responsive design**
  Topics Covered:
-    >>Media Queries
+    >>Hamburger Menu
+    >>Responsive Design
     
 
 File Structure:
-    >>Nikita_Task7
+    >>Nikita_Task8
         >>index.html
         >>style.css
         >>README.md
@@ -12,18 +13,9 @@ File Structure:
         >>image.png
 
 Steps:
-    >>created HTML and CSS file
-    >>Attached CSS to HTML
-    >>Created HTML structure:
-        >>Created header with 3 div - logo, navlinks, username.
-        >>Created Hero section with 2 divs - left and right
-    >>Added styles in CSS file
-        >>Give alignment to body then header
-            >>Set positions of all three divs in header so its fixed and properly aligned with logo on left navlinks in mid and username in right.
-        >>Give styling to Hero section so that the picture stays in right and text on left with proper position and so that th epage dont scroll.
-        >>added responsiveness to the page
-            >>for tablet, smaller elements size
-            >>for mobile, navlinks not visible and hero section content in column alignment
+    >>Added hamburger and menu list to the page
+    >>Added designs and responsiveness to the hamburger and menu list.
+    >>Used CSS focus pseudocode to make hamburger button working. 
 
 
 How to Run:
