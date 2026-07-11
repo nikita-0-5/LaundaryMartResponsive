@@ -4,11 +4,30 @@
     box-sizing: border-box;
 }
 
+:root{
+    /* Colors */
+    --primary: rgb(21, 142, 255);
+    --primary-light: rgb(75, 195, 255);
+    --primary-bg: rgb(189, 224, 241);
+    --hero-btn: #3bbaf188;
+    --hover-bg: #d6eaf6;
+    --shadow: #98ceed;
+    --shadow-light: #c3e7fc;
+
+    /* Text */
+    --text: black;
+    --heading: #00000088;
+
+    /* Radius */
+    --radius: 20px;
+
+    /* Transition */
+    --transition: all 0.3s ease;
+}
+
 body{
     height: 100vh;
     margin: 0px;
-    /* background-color: aqua; */
-    /* padding: 10%; */
 }
 
 header{
@@ -16,7 +35,6 @@ header{
     height: 20vh;
     display: flex;
     flex-direction: row;
-    /* background-color: aliceblue; */
     justify-content: space-between;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,19 +64,18 @@ header{
 li{
     margin: 10px;
     padding: 10px;
-    /* width: 120px; */
 }
 
 a{
     text-decoration: none;
     font-size: larger;
-    color: black;
+    color: var(--text);
 }
 
 a:hover{
-    color:rgb(75, 195, 255);
+    color:var(--primary-light);
     text-decoration: underline;
-    text-shadow: 2px 2px 4px #98ceed;
+    text-shadow: 2px 2px 4px var(--shadow);
 }
 
 .username{
@@ -70,17 +87,18 @@ a:hover{
     width: 150px;
     height: 50px;
     font-size: larger;
-    border: 3px solid rgb(21, 142, 255);
-    border-radius: 20px;
-    color: rgb(21, 142, 255);
-    background-color: rgb(189, 224, 241);
+    border: 3px solid var(--primary);
+    border-radius: var(--radius);
+    color: var(--primary);
+    background-color: var(--primary-bg);
+    transition: var(--transition);
 }
 
 .username button:hover{
-    color:rgb(75, 195, 255);
-    border: 3px solid rgb(75, 195, 255);
-    background-color: #bfe0f5;
-    box-shadow: 2px 2px 4px #98ceed;
+    color:var(--primary-light);
+    border: 3px solid var(--primary-light);
+    background-color: var(--hover-bg);
+    box-shadow: 2px 2px 4px var(--shadow);
     
 }
 
@@ -94,17 +112,23 @@ a:hover{
     gap: 20px;
 }
 
+.right img{
+    width: 500px;
+    transform-origin: center;
+    animation: imgsize 2s linear infinite;
+}
+
 .right{
+    animation: moveTheImg 1s linear infinite ;
+    transform-origin: center;
+    border-radius: 20px;
     flex-basis: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 20px; */
 }
 
-.right img{
-    width: 500px;
-}
+
 .left{
     flex-basis: 40%;
     display: flex;
@@ -134,18 +158,18 @@ h1 span{
     margin-top: 50px;
     height: 50px;
     font-size: larger;
-    border: 1px solid #3bbaf188;
-    border-radius: 20px;
+    border: 1px solid var(--hero-btn);
+    border-radius:var(--radius);
     color: black;
-    background-color: #3bbaf188;
-    transition: all 0.3s ease;
+    background-color: var(--hero-btn);
+    transition:var(--transition);
 }
 
 .left button:hover{
-    color:rgb(0, 167, 251);
-    background-color: #d6eaf6;
+    color:var(--primary);
+    background-color: var(--hover-bg);
     cursor: pointer;
-    box-shadow: 2px 2px 4px #c3e7fc;
+    box-shadow: 2px 2px 4px var(--shadow-light);
     transform: scale(1.1) rotate(-10deg) ;
     
 }
@@ -153,7 +177,6 @@ h1 span{
 
 @media(max-width: 768px){
     header{
-        /* position: relative; */
         font-size: smaller;
     }
     .logo img{
@@ -226,7 +249,6 @@ h1 span{
     .left{
     justify-content: center;
     align-items:flex-start;
-    /* text-align: center; */
     }
 }
 
@@ -251,6 +273,11 @@ h1 span{
     width: 100%;
     background-color: black;
     border-radius: 2px;
+}
+
+.hamburger:hover{
+    box-shadow: 4px 4px 4px var(--shadow);
+    transform: scale(1.2);
 }
 
 
@@ -295,8 +322,31 @@ h1 span{
 
     .hamburger:focus + .menu_list ul{
     right: 0;
+    }
 }
+    
+
+
+@keyframes moveTheImg {
+    from{
+        transform: rotate(0) translateX(40px) rotate(0deg);                   /*counter rotation*/
+    }
+    to{
+        transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    }
 }
+
+@keyframes imgsize {
+     0%,50%,25%{
+        transform: scale(1);
+    }
+    75%{
+        transform: skew(10deg, 10deg);
+    }
+    100%{
+        transform: scaleY(1.2);
+    }
+}
+
     
-    
-    
+
